@@ -1,6 +1,6 @@
 package com.olivia.basic;
 
-public class Demo_01_HeapSort {
+public class Demo01_HeapSort {
     public static void heapSort(int[] arr) {
         if (arr == null || arr.length < 2) return;
         for (int i = 0; i < arr.length; i++) {
