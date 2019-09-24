@@ -1,8 +1,6 @@
 package com.olivia.basic;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 //负数认为第一个参数放前面，记住这一条就行
 
 public class Demo02_Comparator {
@@ -26,6 +24,8 @@ public class Demo02_Comparator {
             Student s = heap.poll();
             System.out.println("Name: " + s.name + ", Id : " + s.id + ", Age : " + s.age);
         }
+
+        TreeSet<Student> treeSet = new TreeSet<>(new IdAscendingComparator());
     }
 
     public static void printStudents(Student[] students) {
