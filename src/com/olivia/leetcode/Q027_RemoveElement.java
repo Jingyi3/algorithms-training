@@ -55,17 +55,3 @@ public class Q027_RemoveElement {
         return slow;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
