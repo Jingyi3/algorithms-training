@@ -1,13 +1,13 @@
-package com.olivia.basic;
+package com.olivia.basic.stackAndQueue;
 
 //用数组实现大小固定的队列和栈 size = initSize
-public class Demo05_ArrayQueue {
+public class Demo02_ArrayQueue {
     private Integer[] arr;
     private Integer size;//size means the number of elements in this array
     private Integer start;
     private Integer end;
 
-    public Demo05_ArrayQueue(int initSize) {
+    public Demo02_ArrayQueue(int initSize) {
         if (initSize < 0)
             throw new IllegalArgumentException("The init size is less than 0");
         arr = new Integer[initSize];

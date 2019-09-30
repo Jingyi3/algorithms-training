@@ -1,4 +1,4 @@
-package com.olivia.basic;
+package com.olivia.basic.sort;
 
 public class Demo01_HeapSort {
     public static void heapSort(int[] arr) {

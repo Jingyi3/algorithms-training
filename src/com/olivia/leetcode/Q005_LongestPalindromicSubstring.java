@@ -15,7 +15,7 @@ package com.olivia.leetcode;
  * <p>
  * 动态规划的方法解
  */
-public class Q005LongestPalindromicSubstring {
+public class Q005_LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
         if (s == null || s.length() == 0) return s;
         int len = s.length();

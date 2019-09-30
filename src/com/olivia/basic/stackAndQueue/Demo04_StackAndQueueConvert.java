@@ -1,10 +1,10 @@
-package com.olivia.basic;
+package com.olivia.basic.stackAndQueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class Demo05_StackAndQueueConvert {
+public class Demo04_StackAndQueueConvert {
     public static class TwoStackQueue {
         private Stack<Integer> stackPush;
         private Stack<Integer> stackPop;

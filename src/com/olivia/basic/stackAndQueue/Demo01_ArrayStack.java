@@ -1,11 +1,11 @@
-package com.olivia.basic;
+package com.olivia.basic.stackAndQueue;
 
 //用数组实现大小固定的队列和栈 size = initSize
-public class Demo05_ArrayStack {
+public class Demo01_ArrayStack {
     private Integer[] arr;
     private Integer index;
 
-    public Demo05_ArrayStack(int initSize) {
+    public Demo01_ArrayStack(int initSize) {
         if (initSize < 0) {
             throw new IllegalArgumentException("This init size is less than 0");
         }

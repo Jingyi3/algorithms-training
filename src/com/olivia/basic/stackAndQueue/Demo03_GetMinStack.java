@@ -1,4 +1,4 @@
-package com.olivia.basic;
+package com.olivia.basic.stackAndQueue;
 
 import java.util.Stack;
 
@@ -15,7 +15,7 @@ import java.util.Stack;
  * 1. 两个栈不同时push
  * 2. 两个栈同时push
  */
-public class Demo05_GetMinStack {
+public class Demo03_GetMinStack {
     public static class MyStack1 {
         private Stack<Integer> stackData;
         private Stack<Integer> stackMin;
