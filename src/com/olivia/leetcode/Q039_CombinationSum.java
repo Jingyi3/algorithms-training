@@ -41,7 +41,7 @@ public class Q039_CombinationSum {
     }
 
     private void combinationSumHelper(int[] candidates, int target, int index, List<List<Integer>> results, List<Integer> curSeq) {
-        if (target == 0) results.add(curSeq);
+        if (target == 0) results.add(new ArrayList<Integer>(curSeq));
         else if (target > 0) {
             for (int i = index; i < candidates.length; i++) {
                 if (candidates[i] > target) break;
@@ -51,4 +51,8 @@ public class Q039_CombinationSum {
             }
         }
     }
+
+
+
+
 }
