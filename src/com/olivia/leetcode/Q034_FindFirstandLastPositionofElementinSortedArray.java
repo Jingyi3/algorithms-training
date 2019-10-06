@@ -16,7 +16,7 @@ package com.olivia.leetcode;
  * Input: nums = [5,7,7,8,8,10], target = 6
  * Output: [-1,-1]
  */
-public class Q034FindFirstandLastPositionofElementinSortedArray {
+public class Q034_FindFirstandLastPositionofElementinSortedArray {
     public int[] serachRange(int[] nums, int target) {
         int[] res = {-1, -1};
         if (nums == null || nums.length == 0) return res;
