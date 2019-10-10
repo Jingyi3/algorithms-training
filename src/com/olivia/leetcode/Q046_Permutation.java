@@ -27,7 +27,9 @@ public class Q046_Permutation {
         if (nums == null || nums.length == 0) {
             return res;
         }
-        
+        permutationHelper(res, new LinkedList<>(), nums, new HashSet<>());
+        return res;
+
 
     }
 
@@ -39,7 +41,7 @@ public class Q046_Permutation {
                     clist.add(nums[i]);
                     int last = clist.size() - 1;
                     set.add(nums[i]);
-                    permute(res, clist, nums, set);
+                    permutationHelper(res, clist, nums, set);
                     set.remove(nums[i]);
                     clist.remove(last);
                 }
