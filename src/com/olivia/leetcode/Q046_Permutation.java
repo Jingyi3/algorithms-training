@@ -24,26 +24,24 @@ import java.util.List;
 public class Q046_Permutation {
     public List<List<Integer>> permute(int nums[]) {
         LinkedList<List<Integer>> res = new LinkedList<>();
-        if (nums == null || nums.length == 0) {
-            return res;
-        }
-        permutationHelper(res, new LinkedList<>(), nums, new HashSet<>());
+        if(nums==null||nums.length==0) return res;
+        permuteHelper(res, new LinkedList<Integer>(), nums, new HashSet<Integer>());
         return res;
-
 
     }
 
-    private void permutationHelper(List<List<Integer>> res, List<Integer> clist, int[] nums, HashSet<Integer> set) {
-        if(clist.size()==nums.length) res.add(new LinkedList<>(clist));
-        else {
+    private void permuteHelper(List<List<Integer>> res, List<Integer> curList, int[] nums, HashSet<Integer> set) {
+        if (curList.size() == nums.length) {
+            res.add(curList);
+        } else {
             for (int i = 0; i < nums.length; i++) {
                 if (!set.contains(nums[i])) {
-                    clist.add(nums[i]);
-                    int last = clist.size() - 1;
+                    curList.add(nums[i]);
+                    int last = curList.size() - 1;
                     set.add(nums[i]);
-                    permutationHelper(res, clist, nums, set);
+                    permuteHelper(res, curList, nums, set);
                     set.remove(nums[i]);
-                    clist.remove(last);
+                    curList.remove(last);//index, not value
                 }
             }
         }
