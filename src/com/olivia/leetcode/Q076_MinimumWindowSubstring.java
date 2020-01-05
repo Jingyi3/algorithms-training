@@ -1,6 +1,15 @@
 package com.olivia.leetcode;
 
 public class Q076_MinimumWindowSubstring {
+
+    public static void main(String[] args) {
+        Q076_MinimumWindowSubstring test = new Q076_MinimumWindowSubstring();
+//        String s = "HSAXABSADCDHHGFHGVUABSAGGCKJHGJFGJFKAFBFASDA";
+//        String t = "AABC";
+//        String minSubstring = test.minWindow(s, t);
+//        System.out.println(minSubstring);
+
+    }
     public String minWindow(String s, String t) {
         if (s == null || t == null || s.length() == 0 || t.length() == 0) {
             return "";
@@ -19,7 +28,7 @@ public class Q076_MinimumWindowSubstring {
         }
         int right = left;
         while (right < s.length()) {
-            int rightChar = s.charAt(right);
+            char rightChar = s.charAt(right);
             if (sArr[rightChar] < tArr[rightChar]) {
                 matchCount++;
             }
@@ -28,8 +37,8 @@ public class Q076_MinimumWindowSubstring {
                 if (res.isEmpty() || res.length() > right - left + 1) {
                     res = s.substring(left, right + 1);
                 }
-                int leftChar = s.charAt(left);
-                if (sArr[left] <= tArr[leftChar]) {
+                char leftChar = s.charAt(left);
+                if (sArr[leftChar] <= tArr[leftChar]) {
                     matchCount--;
                 }
                 sArr[leftChar]--;
