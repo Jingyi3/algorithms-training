@@ -8,7 +8,6 @@ public class Q146_LRUCache extends LinkedHashMap<Integer, Integer> {
     public Q146_LRUCache(int capacity) {
         super(capacity, 0.75F, true);
         this.capacity = capacity;
-
     }
 
     public int get(int key) {
